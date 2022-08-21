@@ -23,12 +23,37 @@ const LaunchRequestHandler = {
 const EleccionesIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
-            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'ubicoPreparado';
+            && Alexa.getIntentName(handlerInput.requestEnvelope) === 'ubicoPreparado'
+                
     },
     handle(handlerInput) {
         const eleccionesSlot = handlerInput.requestEnvelope.request.intent.slots.elecciones.value;
+        //slot: funcionesPopulistas:[poder, populista]
         if (eleccionesSlot) {
             var speakOutput = dbh.dbhistorias[0].historiaP0;    
+        } else {
+            var help = "No has dicho nada";
+        }
+        
+
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(help)
+            .getResponse();
+    }
+};
+const AsumiendoElPoderIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope)=== 'getFuncionesPopulistas';
+    },
+    handle(handlerInput) {
+        const populistaSlot1 = handlerInput.requestEnvelope.request.intent.slots.poder.value;
+        const populistaSlot2 = handlerInput.requestEnvelope.request.intent.slots.funciones.value;
+        //slot: funcionesPopulistas:[poder, populista]
+        var speakOutput;
+        if (populistaSlot1 || populistaSlot2) {
+             speakOutput = dbh.dbhistorias[1].funcionesPopulistas;   
         } else {
             var help = "No has dicho nada";
         }
@@ -152,6 +177,7 @@ exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
         EleccionesIntentHandler,
+        AsumiendoElPoderIntentHandler
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,
