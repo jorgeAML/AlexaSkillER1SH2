@@ -1,0 +1,68 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "ascenso ubico",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hola",
+            "como estás",
+            "di hola mundo",
+            "di hola",
+            "hola mundo"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "ubicoPreparado",
+          "slots": [
+            {
+              "name": "elecciones",
+              "type": "elecciones"
+            }
+          ],
+          "samples": [
+            "candidato único {elecciones}",
+            "candidato mayor de {elecciones}",
+            "{elecciones} ubico"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "elecciones",
+                "synonyms": [
+                  "candidato",
+                  "campaña electoral",
+                  "votos"
+                ]
+              }
+            }
+          ],
+          "name": "elecciones"
+        }
+      ]
+    }
+  },
+  "version": "4"
+}
