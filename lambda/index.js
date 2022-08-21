@@ -11,7 +11,7 @@ const LaunchRequestHandler = {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'LaunchRequest';
     },
     handle(handlerInput) {
-        const speakOutput = 'Hola y bienvenido, te contaré la historia de la caída de Jorge Úbico';
+        const speakOutput = 'Hola y bienvenido, te contaré la historia de la caída de Jorge Úbico en esta primera parte.';
 
         return handlerInput.responseBuilder
             .speak(speakOutput)
@@ -28,7 +28,7 @@ const EleccionesIntentHandler = {
     handle(handlerInput) {
         const eleccionesSlot = handlerInput.requestEnvelope.request.intent.slots.elecciones.value;
         if (eleccionesSlot) {
-            var speakOutput = dbh.dbhistorias[0].historiaP1;    
+            var speakOutput = dbh.dbhistorias[0].historiaP0;    
         } else {
             var help = "No has dicho nada";
         }
