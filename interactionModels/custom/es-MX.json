@@ -41,7 +41,8 @@
           "samples": [
             "candidato único {elecciones}",
             "candidato mayor de {elecciones}",
-            "{elecciones} ubico"
+            "{elecciones} ubico",
+            "{elecciones}"
           ]
         }
       ],
@@ -54,7 +55,8 @@
                 "synonyms": [
                   "candidato",
                   "campaña electoral",
-                  "votos"
+                  "votos",
+                  "1931"
                 ]
               }
             }
