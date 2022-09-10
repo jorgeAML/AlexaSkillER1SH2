@@ -19,6 +19,41 @@ const LaunchRequestHandler = {
             .getResponse();
     }
 };
+const finanzasIntentHandler = {
+    canHandle(handlerInput) {
+        return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
+            && Alexa.getIntentName(handlerInput.requestEnvelope)=== 'getExplicacionEconomica';
+    },
+    handle(handlerInput) {
+        const finanzas1 = handlerInput.requestEnvelope.request.intent.slots.nivel.value;
+        const finanzas2 = handlerInput.requestEnvelope.request.intent.slots.economia.value;
+        const finanzas3 = handlerInput.requestEnvelope.request.intent.slots.finanzas.value;
+        const usufructo1 = handlerInput.requestEnvelope.request.intent.slots.insatisfaccion.value;
+        const usufructo2 = handlerInput.requestEnvelope.request.intent.slots.conflictos.value;
+        const usufructo3 = handlerInput.requestEnvelope.request.intent.slots.usufructo.value;
+        const enganchamiento1 = handlerInput.requestEnvelope.request.intent.slots.enganchamiento.value;
+        const vagancia1 = handlerInput.requestEnvelope.request.intent.slots.vagancia.value;
+        //slot: funcionesPopulistas:[poder, populista]
+        var speakOutput;
+        if (finanzas1 || finanzas2 || finanzas3) {
+             speakOutput = dbh.dbhistorias[2].historiaP1;   
+        } else if (usufructo1 || usufructo2 || usufructo3) {
+             speakOutput = dbh.dbhistorias[3].historiaP2;
+        } else if (enganchamiento1) {
+            speakOutput = dbh.dbhistorias[4].historiaP3;
+        } else if (vagancia1){
+            speakOutput = dbh.dbhistorias[5].historiaP4;
+        } else {
+            var help = "No me has preguntado algo";
+        }
+        
+
+        return handlerInput.responseBuilder
+            .speak(speakOutput)
+            .reprompt(help)
+            .getResponse();
+    }
+};
 
 const EleccionesIntentHandler = {
     canHandle(handlerInput) {
@@ -177,7 +212,8 @@ exports.handler = Alexa.SkillBuilders.custom()
     .addRequestHandlers(
         LaunchRequestHandler,
         EleccionesIntentHandler,
-        AsumiendoElPoderIntentHandler
+        AsumiendoElPoderIntentHandler,
+        finanzasIntentHandler,
         HelpIntentHandler,
         CancelAndStopIntentHandler,
         FallbackIntentHandler,

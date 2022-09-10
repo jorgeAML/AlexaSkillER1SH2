@@ -1,6 +1,11 @@
 const dbhistorias = [
     { historiaP0:"Ubico se había preparado un año atrás para la campaña electoral. Washington logra que las elecciones se hagan de inmediato, en febrero del mismo año, a fin de que Ubico sea el candidato con mayor oportunidad. Ganando las elecciones con más de 300 mil votos."},
-    { funcionesPopulistas: "El general Ubico asume ese mes sus funciones y sus seguidores toman el control de las diversas instituciones del gobierno incluso el legislativo y el judicial, y son miembros del partido liberal progresista, una rama del partido liberal, con tintes populistas en la campaña electoral y que en la práctica quedaría en el olvido."}
+    { funcionesPopulistas: "El general Ubico asume ese mes sus funciones y sus seguidores toman el control de las diversas instituciones del gobierno incluso el legislativo y el judicial, y son miembros del partido liberal progresista, una rama del partido liberal, con tintes populistas en la campaña electoral y que en la práctica quedaría en el olvido."},
+    { historiaP1: "Entre las medidas económicas emergentes que tomó nivel económico no podían ser otras para un terrateniente de aquel tiempo sino fue la de sanear las finanzas públicas, decretando una disminución de entre 10% y 30% el salario de los empleados públicos; pero al mismo tiempo amplio la participación estatal en la construcción de varios edificios públicos y en la apertura de caminos usando la ley de viabilidad"},
+    { historiaP2: "Para mermar la insatisfacción del campesinado - herido por la crisis y en una sociedad en la cual hasta el maíz era en buena parte importado y evitar los conflictos latentes. Ubico otorgó, en usufructo, diversas tierras baldías (como lo hizo Estrada Cabrera a inicios del siglo) a diversas comunidades."},
+    { historiaP3: "La medida que hizo congraciar al campesinado con Ubico, fue el decreto por medio del cual se exoneraba el pago de las deudas con trabajo a los habilitados, y prohibía así mismo ese sistema (aunque en la práctica se seguiría utilizando el nombre de - enganchamiento)."},
+    { historiaP4: "En 1930 la escasez de la tierra del campesinado obligo a Ubico a buscar trabajo en diversos latifundios. Para ello, se le obligó a demostrar que laboraban 160 días al año en las haciendas, mediante la ley de vagancia (que existió en varios períodos del régimen liberal con anterioridad.)"},
+    {},
     ];
     
 module.exports = {dbhistorias};
