@@ -33,6 +33,8 @@ const finanzasIntentHandler = {
         const usufructo3 = handlerInput.requestEnvelope.request.intent.slots.usufructo.value;
         const enganchamiento1 = handlerInput.requestEnvelope.request.intent.slots.enganchamiento.value;
         const vagancia1 = handlerInput.requestEnvelope.request.intent.slots.vagancia.value;
+        const campesinado = handlerInput.requestEnvelope.request.intent.slots.campesinado.value;
+        const terrateniente = handlerInput.requestEnvelope.request.intent.slots.terrateniente.value;
         //slot: funcionesPopulistas:[poder, populista]
         var speakOutput;
         if (finanzas1 || finanzas2 || finanzas3) {
@@ -43,6 +45,10 @@ const finanzasIntentHandler = {
             speakOutput = dbh.dbhistorias[4].historiaP3;
         } else if (vagancia1){
             speakOutput = dbh.dbhistorias[5].historiaP4;
+        } else if (campesinado){
+            speakOutput = dbh.dbhistorias[6].historiaP5;
+        } else if(terrateniente){
+            speakOutput = dbh.dbhistorias[7].historiaP6;
         } else {
             var help = "No me has preguntado algo";
         }
@@ -100,6 +106,7 @@ const AsumiendoElPoderIntentHandler = {
             .getResponse();
     }
 };
+
 
 const HelpIntentHandler = {
     canHandle(handlerInput) {

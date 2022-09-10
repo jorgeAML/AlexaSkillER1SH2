@@ -5,6 +5,8 @@ const dbhistorias = [
     { historiaP2: "Para mermar la insatisfacción del campesinado - herido por la crisis y en una sociedad en la cual hasta el maíz era en buena parte importado y evitar los conflictos latentes. Ubico otorgó, en usufructo, diversas tierras baldías (como lo hizo Estrada Cabrera a inicios del siglo) a diversas comunidades."},
     { historiaP3: "La medida que hizo congraciar al campesinado con Ubico, fue el decreto por medio del cual se exoneraba el pago de las deudas con trabajo a los habilitados, y prohibía así mismo ese sistema (aunque en la práctica se seguiría utilizando el nombre de - enganchamiento)."},
     { historiaP4: "En 1930 la escasez de la tierra del campesinado obligo a Ubico a buscar trabajo en diversos latifundios. Para ello, se le obligó a demostrar que laboraban 160 días al año en las haciendas, mediante la ley de vagancia (que existió en varios períodos del régimen liberal con anterioridad.)"},
+    { historiaP5: "Las medidas en favor del campesinado precolombino eran fruto de los motines y rebeliones dadas desde 1928: ... si esto sigue, las cosas podrían salir de control escribía, en plena crisis su jefe político. Y para que de manera alguna su desarrollo hubiera tenido los efectos que ensangrentaron a El Salvador en 1932."},
+    { historiaP6: "Entre tanto el despacho de agricultura y la oficina de trabajo - con su financiamiento estatal - se han convertido en la práctica por el sistema policiáco, se dotó a los terratenientes para perseguir y capturar malhechores en su jurisdicción"},
     {},
     ];
     
